@@ -19,8 +19,11 @@
 		0041F4491E639EF6003DD08A /* MVVM.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0041F4481E639EF6003DD08A /* MVVM.storyboard */; };
 		0041F44B1E639FA0003DD08A /* MVVMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0041F44A1E639FA0003DD08A /* MVVMViewController.swift */; };
 		00E965891E63A9AB003D1AFC /* DesignedInXibAndNestableInOtherXibs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00E965881E63A9AB003D1AFC /* DesignedInXibAndNestableInOtherXibs.framework */; };
-		00E9658E1E63AA64003D1AFC /* CrementerControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00E9658D1E63AA64003D1AFC /* CrementerControl.xib */; };
-		00E965901E63AB3D003D1AFC /* CrementerControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E9658F1E63AB3D003D1AFC /* CrementerControl.swift */; };
+		00E9658E1E63AA64003D1AFC /* CrementingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00E9658D1E63AA64003D1AFC /* CrementingView.xib */; };
+		00E965901E63AB3D003D1AFC /* CrementingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E9658F1E63AB3D003D1AFC /* CrementingView.swift */; };
+		00E965931E63DC8D003D1AFC /* CrementingNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E965921E63DC8D003D1AFC /* CrementingNumber.swift */; };
+		00E965951E63DCC0003D1AFC /* DataLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E965941E63DCC0003D1AFC /* DataLayer.swift */; };
+		00E965991E64967C003D1AFC /* FibonacciSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E965981E64967C003D1AFC /* FibonacciSequence.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,8 +41,11 @@
 		0041F4481E639EF6003DD08A /* MVVM.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MVVM.storyboard; sourceTree = "<group>"; };
 		0041F44A1E639FA0003DD08A /* MVVMViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVVMViewController.swift; sourceTree = "<group>"; };
 		00E965881E63A9AB003D1AFC /* DesignedInXibAndNestableInOtherXibs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DesignedInXibAndNestableInOtherXibs.framework; path = Carthage/Build/iOS/DesignedInXibAndNestableInOtherXibs.framework; sourceTree = "<group>"; };
-		00E9658D1E63AA64003D1AFC /* CrementerControl.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CrementerControl.xib; sourceTree = "<group>"; };
-		00E9658F1E63AB3D003D1AFC /* CrementerControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrementerControl.swift; sourceTree = "<group>"; };
+		00E9658D1E63AA64003D1AFC /* CrementingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CrementingView.xib; sourceTree = "<group>"; };
+		00E9658F1E63AB3D003D1AFC /* CrementingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrementingView.swift; sourceTree = "<group>"; };
+		00E965921E63DC8D003D1AFC /* CrementingNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrementingNumber.swift; sourceTree = "<group>"; };
+		00E965941E63DCC0003D1AFC /* DataLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLayer.swift; sourceTree = "<group>"; };
+		00E965981E64967C003D1AFC /* FibonacciSequence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FibonacciSequence.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +82,8 @@
 			children = (
 				0041F4391E639A4F003DD08A /* Application */,
 				0041F43B1E639A81003DD08A /* Scenes */,
+				00E9658A1E63A9CC003D1AFC /* CrementingView */,
+				00E965911E63DC7B003D1AFC /* DataLayer */,
 				0041F43A1E639A5C003DD08A /* Supporting Files */,
 			);
 			path = PresenterAndViewModelFun;
@@ -103,7 +111,6 @@
 			isa = PBXGroup;
 			children = (
 				0041F43C1E639B96003DD08A /* Main */,
-				00E9658A1E63A9CC003D1AFC /* Crementer */,
 				0041F43D1E639D00003DD08A /* MVC */,
 				0041F4421E639E5B003DD08A /* MVP */,
 				0041F4471E639ED1003DD08A /* MVVM */,
@@ -155,13 +162,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		00E9658A1E63A9CC003D1AFC /* Crementer */ = {
+		00E9658A1E63A9CC003D1AFC /* CrementingView */ = {
 			isa = PBXGroup;
 			children = (
-				00E9658D1E63AA64003D1AFC /* CrementerControl.xib */,
-				00E9658F1E63AB3D003D1AFC /* CrementerControl.swift */,
+				00E9658D1E63AA64003D1AFC /* CrementingView.xib */,
+				00E9658F1E63AB3D003D1AFC /* CrementingView.swift */,
 			);
-			name = Crementer;
+			name = CrementingView;
+			sourceTree = "<group>";
+		};
+		00E965911E63DC7B003D1AFC /* DataLayer */ = {
+			isa = PBXGroup;
+			children = (
+				00E965941E63DCC0003D1AFC /* DataLayer.swift */,
+				00E965921E63DC8D003D1AFC /* CrementingNumber.swift */,
+				00E965981E64967C003D1AFC /* FibonacciSequence.swift */,
+			);
+			name = DataLayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,7 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0041F4491E639EF6003DD08A /* MVVM.storyboard in Resources */,
-				00E9658E1E63AA64003D1AFC /* CrementerControl.xib in Resources */,
+				00E9658E1E63AA64003D1AFC /* CrementingView.xib in Resources */,
 				0041F4311E638314003DD08A /* LaunchScreen.storyboard in Resources */,
 				0041F42E1E638314003DD08A /* Assets.xcassets in Resources */,
 				0041F42C1E638314003DD08A /* MainTabBar.storyboard in Resources */,
@@ -259,10 +276,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00E965951E63DCC0003D1AFC /* DataLayer.swift in Sources */,
+				00E965931E63DC8D003D1AFC /* CrementingNumber.swift in Sources */,
 				0041F4461E639EB1003DD08A /* MVPViewController.swift in Sources */,
 				0041F44B1E639FA0003DD08A /* MVVMViewController.swift in Sources */,
 				0041F4291E638314003DD08A /* MainTabBarController.swift in Sources */,
-				00E965901E63AB3D003D1AFC /* CrementerControl.swift in Sources */,
+				00E965901E63AB3D003D1AFC /* CrementingView.swift in Sources */,
+				00E965991E64967C003D1AFC /* FibonacciSequence.swift in Sources */,
 				0041F4271E638314003DD08A /* AppDelegate.swift in Sources */,
 				0041F4411E639D3F003DD08A /* MVCViewController.swift in Sources */,
 			);

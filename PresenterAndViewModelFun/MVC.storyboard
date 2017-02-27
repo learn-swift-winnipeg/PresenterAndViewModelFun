@@ -22,23 +22,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e3H-BC-0Fg" customClass="CrementerControl" customModule="PresenterAndViewModelFun" customModuleProvider="target">
-                                <rect key="frame" x="16" y="84" width="343" height="140"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="q3M-hs-K8O">
+                                <rect key="frame" x="16" y="84" width="343" height="534"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e3H-BC-0Fg" customClass="CrementingView" customModule="PresenterAndViewModelFun" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="140"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="140" id="7Nl-2b-acf"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fibonacci!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hyD-aT-2y8">
+                                        <rect key="frame" x="101" y="140" width="141" height="394"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="140" id="7Nl-2b-acf"/>
+                                    <constraint firstItem="e3H-BC-0Fg" firstAttribute="width" secondItem="q3M-hs-K8O" secondAttribute="width" id="vWk-3c-3m0"/>
                                 </constraints>
-                            </view>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.99540406589999997" green="0.81295985159999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="e3H-BC-0Fg" firstAttribute="top" secondItem="I8j-tG-YXr" secondAttribute="bottom" constant="20" id="Ni9-3x-ICU"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="e3H-BC-0Fg" secondAttribute="trailing" id="Qzy-R1-8Fx"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="e3H-BC-0Fg" secondAttribute="leading" id="iij-sp-uyF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="q3M-hs-K8O" secondAttribute="trailing" id="12s-9O-jNC"/>
+                            <constraint firstItem="q3M-hs-K8O" firstAttribute="top" secondItem="I8j-tG-YXr" secondAttribute="bottom" constant="20" id="9oe-Uo-oRO"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="q3M-hs-K8O" secondAttribute="leading" id="GzQ-hL-RQp"/>
+                            <constraint firstItem="E2B-9u-01o" firstAttribute="top" secondItem="q3M-hs-K8O" secondAttribute="bottom" id="Tpa-jD-P9Q"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="MVC" id="boB-gZ-yra"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="crementingView" destination="e3H-BC-0Fg" id="0ci-gI-Ctg"/>
+                        <outlet property="messageLabel" destination="hyD-aT-2y8" id="wTk-0K-X6U"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PhW-7u-sV4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
