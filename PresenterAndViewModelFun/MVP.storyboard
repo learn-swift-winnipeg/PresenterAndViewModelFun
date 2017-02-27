@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,13 +21,27 @@
                     <view key="view" contentMode="scaleToFill" id="My9-nb-0p4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dBL-fM-TdN" customClass="CrementerControl" customModule="PresenterAndViewModelFun" customModuleProvider="target">
+                                <rect key="frame" x="16" y="84" width="343" height="140"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="nTc-ab-yWa"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="0.86583914429999997" green="1" blue="0.90534795580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="dBL-fM-TdN" secondAttribute="leading" id="XTR-Pl-2HV"/>
+                            <constraint firstItem="dBL-fM-TdN" firstAttribute="top" secondItem="F53-W8-JOi" secondAttribute="bottom" constant="20" id="a8F-76-86b"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dBL-fM-TdN" secondAttribute="trailing" id="iiY-7W-pL0"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="MVP" id="uYR-Iy-m72"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WTf-95-XmW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="785" y="84"/>
+            <point key="canvasLocation" x="784.79999999999995" y="83.208395802098963"/>
         </scene>
         <!--MVP-->
         <scene sceneID="HTz-JB-oOR">
