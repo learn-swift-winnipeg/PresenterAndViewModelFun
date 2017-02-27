@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2ny-AQ-KrF">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--MVVM-->
+        <scene sceneID="TZe-A7-DIG">
+            <objects>
+                <viewController id="YsW-hC-g9v" customClass="MVVMViewController" customModule="PresenterAndViewModelFun" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="krc-qb-XYu"/>
+                        <viewControllerLayoutGuide type="bottom" id="7oz-E3-caM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Itx-Fh-Pgn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.5929110509371901" blue="0.56880062183363977" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="MVVM" id="j4t-vB-Rqq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PkX-6t-51w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="734" y="62"/>
+        </scene>
+        <!--MVVM-->
+        <scene sceneID="l3l-Xz-c2N">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2ny-AQ-KrF" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="MVVM" id="Kdj-r4-a3p"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="glv-Q7-ep3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="YsW-hC-g9v" kind="relationship" relationship="rootViewController" id="4UE-cD-wUf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="heJ-gX-erR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="21.600000000000001" y="61.619190404797607"/>
+        </scene>
+    </scenes>
+</document>
