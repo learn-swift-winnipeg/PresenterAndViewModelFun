@@ -1,81 +1,72 @@
-import UIKit
+import Foundation
 
-class MVCViewController: UIViewController,
-    CrementingViewDelegate
-{
-    // MARK: - Outlets
-    
-    @IBOutlet private var crementingView: CrementingView!
-    @IBOutlet private var messageLabel: UILabel!
+// MARK: - PresenterView
+
+protocol PresenterView: class {
+    func updateCrementingView(with valueLabelText: String)
+    func updateMessageLabel(with messageLabelText: String?)
+}
+
+// MARK: - Presenter
+
+class Presenter {
     
     // MARK: - Stored Properties
     
+    private let dataLayer: DataLayer
     private var crementingNumber: CrementingNumber?
+    
+    // NOTE: `weak` reference is important to avoid reference cycle a.k.a. memory leak!
+    private weak var view: PresenterView?
     
     // MARK: - Lifecycle
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        setupCrementingView()
+    init(dataLayer: DataLayer, view: PresenterView) {
+        self.dataLayer = dataLayer
+        self.view = view
         
         loadLastSelectedCrementingNumberFromDataLayer()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        updateViews()
-    }
-    
-    // MARK: - Setting Up Views
-    
-    private func setupCrementingView() {
-        crementingView.delegate = self
-    }
-    
-    // MARK: - Updating Views
-    
-    private func updateViews() {
-        updateCrementingView()
-        updateMessageLabel()
-    }
-    
-    private func updateCrementingView() {
-        let valueLabelText = crementingNumber?.value.description ?? "###"
-        crementingView.valueLabel.text = valueLabelText
-    }
-    
-    private func updateMessageLabel() {
-        if isCurrentCrementingNumberInFibonacciSequence {
-            messageLabel.text = "Fibonacci!"
-        } else {
-            messageLabel.text = nil
-        }
     }
     
     // MARK: - Loading Data
     
     private func loadLastSelectedCrementingNumberFromDataLayer() {
-        crementingNumber = DataLayerSingleton.instance.lastSelectedCrementingNumber
+        crementingNumber = dataLayer.lastSelectedCrementingNumber
     }
     
     // MARK: - Saving Data
     
     private func saveCrementingNumberToDataLayer() {
         guard let crementingNumber = self.crementingNumber else { return }
-        DataLayerSingleton.instance.save(crementingNumber)
+        dataLayer.save(crementingNumber)
+    }
+    
+    // MARK: - Updating Views
+    
+    func updateViews() {
+        updateCrementingView()
+        updateMessageLabel()
+    }
+    
+    private func updateCrementingView() {
+        let valueLabelText = crementingNumber?.value.description ?? "###"
+        view?.updateCrementingView(with: valueLabelText)
+    }
+    
+    private func updateMessageLabel() {
+        let messageLabelText = isCurrentCrementingNumberInFibonacciSequence ? "Fibonacci!" : nil
+        view?.updateMessageLabel(with: messageLabelText)
     }
     
     // MARK: - Handling User Events
     
-    func crementingViewDidTapDecrement(_ crementingView: CrementingView) {
+    func crementingViewDidTapDecrement() {
         decrementCrementingNumber()
         updateViews()
         saveCrementingNumberToDataLayer()
     }
     
-    func crementingViewDidTapIncrement(_ crementingView: CrementingView) {
+    func crementingViewDidTapIncrement() {
         incrementCrementingNumber()
         updateViews()
         saveCrementingNumberToDataLayer()

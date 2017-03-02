@@ -18,6 +18,7 @@
 		0041F4461E639EB1003DD08A /* MVPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0041F4451E639EB1003DD08A /* MVPViewController.swift */; };
 		0041F4491E639EF6003DD08A /* MVVM.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0041F4481E639EF6003DD08A /* MVVM.storyboard */; };
 		0041F44B1E639FA0003DD08A /* MVVMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0041F44A1E639FA0003DD08A /* MVVMViewController.swift */; };
+		00E255931E683C88002DE733 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E255921E683C88002DE733 /* Presenter.swift */; };
 		00E965891E63A9AB003D1AFC /* DesignedInXibAndNestableInOtherXibs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00E965881E63A9AB003D1AFC /* DesignedInXibAndNestableInOtherXibs.framework */; };
 		00E9658E1E63AA64003D1AFC /* CrementingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00E9658D1E63AA64003D1AFC /* CrementingView.xib */; };
 		00E965901E63AB3D003D1AFC /* CrementingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E9658F1E63AB3D003D1AFC /* CrementingView.swift */; };
@@ -40,6 +41,7 @@
 		0041F4451E639EB1003DD08A /* MVPViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVPViewController.swift; sourceTree = "<group>"; };
 		0041F4481E639EF6003DD08A /* MVVM.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MVVM.storyboard; sourceTree = "<group>"; };
 		0041F44A1E639FA0003DD08A /* MVVMViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVVMViewController.swift; sourceTree = "<group>"; };
+		00E255921E683C88002DE733 /* Presenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		00E965881E63A9AB003D1AFC /* DesignedInXibAndNestableInOtherXibs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DesignedInXibAndNestableInOtherXibs.framework; path = Carthage/Build/iOS/DesignedInXibAndNestableInOtherXibs.framework; sourceTree = "<group>"; };
 		00E9658D1E63AA64003D1AFC /* CrementingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CrementingView.xib; sourceTree = "<group>"; };
 		00E9658F1E63AB3D003D1AFC /* CrementingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrementingView.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 			children = (
 				0041F4431E639E8E003DD08A /* MVP.storyboard */,
 				0041F4451E639EB1003DD08A /* MVPViewController.swift */,
+				00E255921E683C88002DE733 /* Presenter.swift */,
 			);
 			name = MVP;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				00E965931E63DC8D003D1AFC /* CrementingNumber.swift in Sources */,
 				0041F4461E639EB1003DD08A /* MVPViewController.swift in Sources */,
 				0041F44B1E639FA0003DD08A /* MVVMViewController.swift in Sources */,
+				00E255931E683C88002DE733 /* Presenter.swift in Sources */,
 				0041F4291E638314003DD08A /* MainTabBarController.swift in Sources */,
 				00E965901E63AB3D003D1AFC /* CrementingView.swift in Sources */,
 				00E965991E64967C003D1AFC /* FibonacciSequence.swift in Sources */,

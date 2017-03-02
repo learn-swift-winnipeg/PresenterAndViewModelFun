@@ -22,19 +22,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cfM-gR-XjF" customClass="CrementingView" customModule="PresenterAndViewModelFun" customModuleProvider="target">
-                                <rect key="frame" x="16" y="84" width="343" height="140"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="FTU-ge-cQC">
+                                <rect key="frame" x="16" y="84" width="343" height="534"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vzs-wG-QOL" customClass="CrementingView" customModule="PresenterAndViewModelFun" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="140"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="140" id="WqQ-zG-vQg"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fibonacci!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ESg-5P-xdH">
+                                        <rect key="frame" x="101" y="140" width="141" height="394"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="140" id="ZX8-Ve-Kpo"/>
+                                    <constraint firstItem="Vzs-wG-QOL" firstAttribute="width" secondItem="FTU-ge-cQC" secondAttribute="width" id="T1z-i2-ILb"/>
                                 </constraints>
-                            </view>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.5929110509371901" blue="0.56880062183363977" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="cfM-gR-XjF" secondAttribute="trailing" id="2p5-Cp-10t"/>
-                            <constraint firstItem="cfM-gR-XjF" firstAttribute="top" secondItem="krc-qb-XYu" secondAttribute="bottom" constant="20" id="h9V-bq-YWI"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="cfM-gR-XjF" secondAttribute="leading" id="i3a-MM-ftZ"/>
+                            <constraint firstItem="7oz-E3-caM" firstAttribute="top" secondItem="FTU-ge-cQC" secondAttribute="bottom" id="DL7-7n-A89"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="FTU-ge-cQC" secondAttribute="leading" id="F0M-6I-65R"/>
+                            <constraint firstItem="FTU-ge-cQC" firstAttribute="top" secondItem="krc-qb-XYu" secondAttribute="bottom" constant="20" id="jmX-cJ-BuI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FTU-ge-cQC" secondAttribute="trailing" id="ssO-Zp-QIm"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="MVVM" id="j4t-vB-Rqq"/>
@@ -46,6 +61,7 @@
         <!--MVVM-->
         <scene sceneID="l3l-Xz-c2N">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="heJ-gX-erR" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2ny-AQ-KrF" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="MVVM" id="Kdj-r4-a3p"/>
                     <toolbarItems/>
@@ -59,7 +75,6 @@
                         <segue destination="YsW-hC-g9v" kind="relationship" relationship="rootViewController" id="4UE-cD-wUf"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="heJ-gX-erR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="21.600000000000001" y="61.619190404797607"/>
         </scene>

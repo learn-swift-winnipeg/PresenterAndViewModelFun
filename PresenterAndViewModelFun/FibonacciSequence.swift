@@ -1,6 +1,6 @@
 import Foundation
 
-// MARK: -
+// MARK: - FibonacciSequence
 
 struct FibonacciSequence {
     
@@ -11,7 +11,18 @@ struct FibonacciSequence {
     // MARK: - Static
     
     private static func makeFibonacciSequence() -> Array<Int> {
-        let fibonacciSequence = sequence(
+        let negativeFibonacciSequence = sequence(
+            state: (-1, -1),
+            next: { (state: inout (Int, Int)) -> Int? in
+                let (n1, n2) = state
+                if n1 > 0 { return nil }
+                state = (n2, n1 &+ n2)
+                
+                return n1
+            }
+        )
+        
+        let positiveFibonacciSequence = sequence(
             state: (0, 1),
             next: { (state: inout (Int, Int)) -> Int? in
                 let (n1, n2) = state
@@ -22,7 +33,7 @@ struct FibonacciSequence {
             }
         )
         
-        return Array(fibonacciSequence)
+        return Array(negativeFibonacciSequence).reversed() + Array(positiveFibonacciSequence)
     }
 }
 

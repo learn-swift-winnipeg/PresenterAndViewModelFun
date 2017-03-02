@@ -22,22 +22,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dBL-fM-TdN" customClass="CrementingView" customModule="PresenterAndViewModelFun" customModuleProvider="target">
-                                <rect key="frame" x="16" y="84" width="343" height="140"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6zq-yy-EW1">
+                                <rect key="frame" x="16" y="84" width="343" height="534"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dBL-fM-TdN" customClass="CrementingView" customModule="PresenterAndViewModelFun" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="140"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="140" id="nTc-ab-yWa"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fibonacci!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gbC-Uz-slH">
+                                        <rect key="frame" x="101" y="140" width="141" height="394"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="140" id="nTc-ab-yWa"/>
+                                    <constraint firstAttribute="width" secondItem="dBL-fM-TdN" secondAttribute="width" id="KgS-yx-ypI"/>
                                 </constraints>
-                            </view>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.86583914429999997" green="1" blue="0.90534795580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="leadingMargin" secondItem="dBL-fM-TdN" secondAttribute="leading" id="XTR-Pl-2HV"/>
-                            <constraint firstItem="dBL-fM-TdN" firstAttribute="top" secondItem="F53-W8-JOi" secondAttribute="bottom" constant="20" id="a8F-76-86b"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="dBL-fM-TdN" secondAttribute="trailing" id="iiY-7W-pL0"/>
+                            <constraint firstItem="vn5-Ic-dBH" firstAttribute="top" secondItem="6zq-yy-EW1" secondAttribute="bottom" id="cW8-4R-pps"/>
+                            <constraint firstItem="6zq-yy-EW1" firstAttribute="top" secondItem="F53-W8-JOi" secondAttribute="bottom" constant="20" id="eZD-lY-SEV"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="6zq-yy-EW1" secondAttribute="leading" id="o1V-gB-Qea"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6zq-yy-EW1" secondAttribute="trailing" id="wj0-uD-lYm"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="MVP" id="uYR-Iy-m72"/>
+                    <connections>
+                        <outlet property="crementingView" destination="dBL-fM-TdN" id="FO8-Hc-Tvj"/>
+                        <outlet property="messageLabel" destination="gbC-Uz-slH" id="bMa-DJ-P7y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WTf-95-XmW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
