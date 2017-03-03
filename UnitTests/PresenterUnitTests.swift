@@ -1,6 +1,33 @@
 import XCTest
 @testable import PresenterAndViewModelFun
 
+// MARK: - MockDataLayer
+
+class MockDataLayer: DataLayer {
+    
+    var lastSelectedCrementingNumber: CrementingNumber?
+    
+    var saveCallResult: CallResult<CrementingNumber> = .notCalled
+    func save(_ crementingNumber: CrementingNumber) {
+        saveCallResult = .called(with: crementingNumber)
+    }
+}
+
+// MARK: MockPresenterView
+
+class MockPresenterView: PresenterView {
+    
+    var updateCrementingViewCallResult: CallResult<String> = .notCalled
+    func updateCrementingView(with valueLabelText: String) {
+        updateCrementingViewCallResult = .called(with: valueLabelText)
+    }
+    
+    var updateMessageLabelCallResult = CallResult<String>.notCalled
+    func updateMessageLabel(with messageLabelText: String?) {
+        updateMessageLabelCallResult = .called(with: messageLabelText)
+    }
+}
+
 // MARK: - PresenterUnitTests
 
 class PresenterUnitTests: XCTestCase {
@@ -156,32 +183,5 @@ class PresenterUnitTests: XCTestCase {
         let actual = mockDataLayer.saveCallResult
         
         XCTAssertEqual(expected, actual)
-    }
-}
-
-// MARK: - MockDataLayer
-
-class MockDataLayer: DataLayer {
-    
-    var lastSelectedCrementingNumber: CrementingNumber?
-    
-    var saveCallResult: CallResult<CrementingNumber> = .notCalled
-    func save(_ crementingNumber: CrementingNumber) {
-        saveCallResult = .called(with: crementingNumber)
-    }
-}
-
-// MARK: MockPresenterView
-
-class MockPresenterView: PresenterView {
-    
-    var updateCrementingViewCallResult: CallResult<String> = .notCalled
-    func updateCrementingView(with valueLabelText: String) {
-        updateCrementingViewCallResult = .called(with: valueLabelText)
-    }
-    
-    var updateMessageLabelCallResult = CallResult<String>.notCalled
-    func updateMessageLabel(with messageLabelText: String?) {
-        updateMessageLabelCallResult = .called(with: messageLabelText)
     }
 }
