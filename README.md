@@ -3,3 +3,22 @@ Project used for Winnipeg iOS Developers "Application Architecture: Presenters &
 
 MVC/MVP/MVVM Comparison slides are in [MVC-MVP-MVVM Comparison.pdf](MVC-MVP-MVVM Comparison.pdf)
 
+### References
+
+**Reference Presentation Model** (Martin Fowler)
+- https://martinfowler.com/eaaDev/PresentationModel.html
+
+Taming MVC with Model View Presenter (Jon Reid)
+https://youtu.be/iIcGunopmfQ
+
+The MVVM Pattern (Microsoft)
+https://msdn.microsoft.com/en-us/library/hh848246.aspx
+
+Introduction to MVVM (Ash Furrow)
+https://www.objc.io/issues/13-architecture/mvvm/
+
+MVVM is Not Very Good (Soroush Khanlou)
+http://khanlou.com/2015/12/mvvm-is-not-very-good/
+
+MVVM is Exceptionally OK (Ash Furrow)
+https://ashfurrow.com/blog/mvvm-is-exceptionally-ok/

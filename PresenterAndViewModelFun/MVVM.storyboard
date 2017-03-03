@@ -61,7 +61,6 @@
         <!--MVVM-->
         <scene sceneID="l3l-Xz-c2N">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="heJ-gX-erR" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2ny-AQ-KrF" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="MVVM" id="Kdj-r4-a3p"/>
                     <toolbarItems/>
@@ -75,6 +74,7 @@
                         <segue destination="YsW-hC-g9v" kind="relationship" relationship="rootViewController" id="4UE-cD-wUf"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="heJ-gX-erR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="21.600000000000001" y="61.619190404797607"/>
         </scene>
