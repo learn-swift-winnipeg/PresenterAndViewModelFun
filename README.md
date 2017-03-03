@@ -5,8 +5,8 @@ MVC/MVP/MVVM Comparison slides are in [MVC-MVP-MVVM Comparison.pdf](MVC-MVP-MVVM
 
 ### References
 
-**Reference Presentation Model** (Martin Fowler)
-- https://martinfowler.com/eaaDev/PresentationModel.html
+- **Reference Presentation Model** (Martin Fowler)
+  - https://martinfowler.com/eaaDev/PresentationModel.html
 
 Taming MVC with Model View Presenter (Jon Reid)
 https://youtu.be/iIcGunopmfQ
