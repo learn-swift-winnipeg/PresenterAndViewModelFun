@@ -11,7 +11,7 @@ brew install carthage
 
 ### Slides
 
-MVC/MVP/MVVM Comparison slides are in [MVC-MVP-MVVM Comparison.pdf](MVC-MVP-MVVM Comparison.pdf)
+MVC/MVP/MVVM Comparison slides are in [MVC-MVP-MVVM Comparison Slides.pdf](MVC-MVP-MVVM Comparison Slides.pdf)
 
 ### References
 
