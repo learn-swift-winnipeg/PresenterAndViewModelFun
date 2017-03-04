@@ -1,7 +1,7 @@
 # PresenterAndViewModelFun
 Project used for Winnipeg iOS Developers "Application Architecture: Presenters & View Models (MVP & MVVM)" meetup presentation.
 
-### Prerequites
+### Build Prerequisites
 
 You'll need to have [Carthage](https://github.com/Carthage/Carthage) installed:
 ```
