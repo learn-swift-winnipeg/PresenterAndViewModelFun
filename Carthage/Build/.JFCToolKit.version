@@ -1,0 +1,18 @@
+{
+  "iOS" : [
+    {
+      "hash" : "5c78f0c3e02b2b67a11e6bb3256c31454956bf69f144b4e52e09966999fe6b22",
+      "name" : "JFCToolKit"
+    }
+  ],
+  "commitish" : "1.0.1",
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+
+  ],
+  "Mac" : [
+
+  ]
+}

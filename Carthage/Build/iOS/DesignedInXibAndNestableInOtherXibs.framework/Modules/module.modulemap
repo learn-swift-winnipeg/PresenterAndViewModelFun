@@ -1,3 +1,0 @@
-framework module DesignedInXibAndNestableInOtherXibs {
-    header "DesignedInXibAndNestableInOtherXibs-Swift.h"
-}

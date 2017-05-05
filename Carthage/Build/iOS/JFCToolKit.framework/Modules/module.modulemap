@@ -1,0 +1,10 @@
+framework module JFCToolKit {
+  umbrella header "JFCToolKit.h"
+
+  export *
+  module * { export * }
+}
+
+module JFCToolKit.Swift {
+    header "JFCToolKit-Swift.h"
+}

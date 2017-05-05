@@ -1,5 +1,5 @@
 import UIKit
-import DesignedInXibAndNestableInOtherXibs
+import JFCToolKit
 
 protocol CrementingViewDelegate: class {
     func crementingViewDidTapDecrement(_ crementingView: CrementingView)
